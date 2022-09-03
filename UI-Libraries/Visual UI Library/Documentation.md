@@ -2,20 +2,21 @@
 
 ## Getting Loadstring
 ```lua
-local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Mapple7777/Visual-UI-Library/main/Source.lua'))()
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
 ```
 
 ## Creating Window
 ```lua
-local Window = Library:CreateWindow('Hub Name', 'Game Name', 'Visual UI Library', 'rbxassetid://10618928818', 'VisualUIConfigs', 'Default')
+local Window = Library:CreateWindow('Hub Name', 'Game Name', 'Visual UI Library', 'rbxassetid://10618928818', false, 'VisualUIConfigs', 'Default')
 ```
 ```text
 1.) <String> Name of the UI.
 2.) <String> Name of the Game.
 3.) <String> Text that shows in the intro screen.
 4.) <String> URL of the icon that shows in the intro screen.
-5.) <String> the path that the config folder should be in your exploits workspace folder.
-6.) <String or Table> The name of a pre-made theme or a table with your custom theme (Find more in Themes.md).
+5.) <Bool> if true, themes will be disabled, if false, themes will be enabled (this setting is to increase performance)
+6.) <String> the path that the config folder should be in your exploits workspace folder.
+7.) <String or Table> The name of a pre-made theme or a table with your custom theme (Find more in Themes.md).
 ```
 
 ## Creating Tabs
