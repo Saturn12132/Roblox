@@ -1,6 +1,3 @@
--- // Services
-local HttpService = game:GetService('HttpService')
-
 -- // Variables
 local Cache = {}
 local MissingFunctions = {}
@@ -33,7 +30,7 @@ local Methods = {
 }
 local Visual = {
     Loaded = true,
-    Name = HttpService:GenerateGUID()
+    Name = 'VisualAnalyser'
 }
 
 -- // Check Exploit Compatibility
@@ -50,7 +47,6 @@ end
 
 -- // Environment
 local Environment = getgenv()
-Environment.Visual = Visual
 
 -- // Functions
 function Environment.Import(URL)
@@ -65,6 +61,10 @@ function Environment.Import(URL)
     return table.unpack(Imported)
 end
 
+-- // Add Settings Table To Environment
+Environment.Visual = Visual
+
 -- // Imports
 local UIHandler = Import('UI/UIHandler.lua')
 UIHandler.LoadUI()
+
